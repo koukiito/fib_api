@@ -1,0 +1,42 @@
+swagger: "2.0"
+host: "example.com"
+basePath: "/"
+tags:
+- name: "fib"
+info:
+  title: fib-api
+  version: 1.0.0
+schemes:
+- "https"
+- "http"
+paths:
+  /fib:
+    get:
+      tags:
+      - "fib"
+      summary: "Find fibonacci by n"
+      description: "Returns a single value"
+      operationId: "getFibonacciByN"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "n"
+        in: "query"
+        description: "n of Fib"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        "200":
+          description: successful operation
+          schema:
+            $ref: '#/definitions/FibResponse'      
+        "400":
+          description: Invalid input
+definitions:
+  FibResponse:
+    type: "object"
+    properties:
+      result:
+        type: "integer"
+        format: "int32"
