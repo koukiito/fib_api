@@ -22,7 +22,7 @@ test("getFibonacciByNImpl - validated numbers", async () => {
     await getFibonacciByNImpl(req, res);
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.send).toHaveBeenCalledWith(
-      JSONBig.stringify({ status: 200, result: expected[i - 1] }),
+      JSONBig.stringify({ result: expected[i - 1] }),
     );
   }
 });
@@ -49,7 +49,7 @@ test("getFibonacciByNImpl - validated big numbers", async () => {
     await getFibonacciByNImpl(req, res);
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.send).toHaveBeenCalledWith(
-      JSONBig.stringify({ status: 200, result: expectedFib }),
+      JSONBig.stringify({ result: expectedFib }),
     );
   }
 });

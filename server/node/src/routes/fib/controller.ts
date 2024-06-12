@@ -21,7 +21,7 @@ export const getFibonacciByNImpl = async (req, res) => {
   res
     .status(200)
     .type("json")
-    .send(JSONBig.stringify({ status: 200, result: fibonacci }));
+    .send(JSONBig.stringify({ result: fibonacci }));
 };
 
 function fibonacciByN(n: number): bigint {
