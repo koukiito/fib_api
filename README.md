@@ -60,7 +60,7 @@ npm run dev
 #### Response
 Status: 200
 ```json
-{"status":200,"result":218922995834555169026}
+{"result":218922995834555169026}
 ```
 
 ## エラーコード
